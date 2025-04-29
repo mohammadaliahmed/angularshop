@@ -31,6 +31,10 @@ export class AdminAddProductComponentComponent {
     }).subscribe({
       next: (Response) => {
         this.errorFromServer = ""
+        this.name = ""
+        this.price =0
+        this.description= ""
+        this.coverImage= ""
       }, error: (error) => {
         this.errorFromServer = error.error.message
       }

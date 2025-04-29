@@ -3,14 +3,12 @@ import { Component, inject } from '@angular/core';
 import { environmentConstants } from '../shared/constants';
 
 @Component({
-  selector: 'app-admin-product-list-component',
+  selector: 'app-home-products',
   imports: [],
-  templateUrl: './admin-product-list-component.component.html',
-  styleUrl: './admin-product-list-component.component.css'
+  templateUrl: './home-products.component.html',
+  styleUrl: './home-products.component.css'
 })
-export class AdminProductListComponentComponent {
-
-
+export class HomeProductsComponent {
   http = inject(HttpClient)
   productList: any[] = [];
   ngOnInit(): void {
@@ -18,7 +16,6 @@ export class AdminProductListComponentComponent {
       this.productList = response;
     })
   }
-
 
 
 }

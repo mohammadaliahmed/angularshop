@@ -1,1 +1,29 @@
-<p>admin-product-list-component works!</p>
+<h3>Product List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(product of productList; track product.id){
+        <tr>
+            <th scope="row">1</th>
+            <td><img src="{{product.coverImage}}" width="100"></td>
+            <td>{{product.name}}</td>
+            <td>Rs {{product.price}}</td>
+            <td>
+                <span><a href="product/edit/{{product.id}}"><i class="fa fa-pencil p-3"></i></a><a
+                        href="product/delete/{{product.id}}"><i class="fa fa-trash p-3"></i></a></span>
+
+            </td>
+
+        </tr>
+        }
+
+    </tbody>
+</table>
