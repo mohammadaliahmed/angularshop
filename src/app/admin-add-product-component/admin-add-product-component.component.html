@@ -1,1 +1,34 @@
-<p>admin-add-product-component works!</p>
+<div class="container ">
+    <div class="card m-4 p-4">
+        <h3>Add Product</h3>
+        <form>
+            <div class="row">
+                <div class="col-6">
+                    <label>Enter Name</label>
+                    <input type="text" name="name" [(ngModel)]="name" class="form-control">
+                </div>
+                <div class="col-6">
+                    <label>Enter price</label>
+                    <input type="number" name="price" [(ngModel)]="price" class="form-control">
+                </div>
+                <div class="col-6">
+                    <label>Enter Image Url</label>
+                    <input type="text" name="coverImage" [(ngModel)]="coverImage" class="form-control">
+                </div>
+                <div class="col-6">
+                    <label>Enter description</label>
+                    <input type="text" name="description" [(ngModel)]="description" class="form-control">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-outline-danger  m-4" style="width: 150px;" (click)="OnCancel()">Cancel</button>
+
+                <button type="button" class="btn btn-success  m-4" style="width: 150px;" (click)="OnSaveProduct()">Add Product</button>
+             
+            </div>
+        </form>
+        <p class="text-danger">{{errorFromServer}}</p>
+
+    </div>
+
+</div>

@@ -6,21 +6,19 @@ import { CartComponentComponent } from './cart-component/cart-component.componen
 import { AdminProductListComponentComponent } from './admin-product-list-component/admin-product-list-component.component';
 import { AdminAddProductComponentComponent } from './admin-add-product-component/admin-add-product-component.component';
 import { AdminOrdersComponentComponent } from './admin-orders-component/admin-orders-component.component';
+import { HomeComponentComponent } from './home-component/home-component.component';
+import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 
 export const routes: Routes = [
-    {
-        path: '',
-        redirectTo: '',
-        pathMatch: 'full'
-
-    },
+    { path: '', component: HomeComponentComponent },
     { path: 'auth', component: AuthComponentComponent },
     { path: 'thank-you', component: ThankyouComponentComponent },
     { path: 'orders', component: MyOrdersComponentComponent },
     { path: 'cart', component: CartComponentComponent },
     { path: 'view-product/:id', component: AuthComponentComponent },
-    { 
+    {
         path: 'admin',
+        component:AdminLayoutComponent,
         children: [
             { path: 'product-list', component: AdminProductListComponentComponent },
             { path: 'add-product', component: AdminAddProductComponentComponent },
