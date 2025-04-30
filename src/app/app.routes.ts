@@ -8,6 +8,7 @@ import { AdminAddProductComponentComponent } from './admin-add-product-component
 import { AdminOrdersComponentComponent } from './admin-orders-component/admin-orders-component.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
+import { ViewProductComponent } from './view-product/view-product.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponentComponent },
@@ -15,7 +16,7 @@ export const routes: Routes = [
     { path: 'thank-you', component: ThankyouComponentComponent },
     { path: 'orders', component: MyOrdersComponentComponent },
     { path: 'cart', component: CartComponentComponent },
-    { path: 'view-product/:id', component: AuthComponentComponent },
+    { path: 'view-product/:id', component: ViewProductComponent },
     {
         path: 'admin',
         component:AdminLayoutComponent,

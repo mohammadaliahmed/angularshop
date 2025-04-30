@@ -1,1 +1,53 @@
-<p>cart-component works!</p>
+<app-navigation></app-navigation>
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <h3>Your cart Items</h3>
+    </div>
+    <div class="row">
+        <div class="col-lg-9 col-md-8 col-sm-12">
+            <div class="card">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for(cart of cartItems;track cart.id;let $i = $index){
+                        <tr>
+                            <th>{{$index+1}}</th>
+                            <th>
+                                <span>
+                                    <img src="{{cart.product.coverImage}}" width="50">
+                                    {{cart.product.name}}
+                                </span>
+                            </th>
+                            <th>Rs {{cart.product.price}}</th>
+                            <th>
+                                <div>
+                                    <i class="fa fa-minus m-3" (click)="DecreaseQuantity()"></i>
+                                    {{cart.quantity}}
+                                    <i class="fa fa-plus m-3" (click)="IncreaseQuantity()"></i>
+                                </div>
+                            </th>
+                            <th>Rs {{cart.product.price*cart.quantity}}</th>
+                        </tr>
+
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12">
+            <div class="card">
+
+            </div>
+        </div>
+    </div>
+
+</div>
